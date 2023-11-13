@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Petter-Nikolai Kristoffersen">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="/js/contact.js"></script>
+    <title>TechVision | Contact</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="nav-a" href="/index.html">Home</a></li>
+                <li><a class="nav-a" href="/blog-posts.html">Blog</a></li>
+                <li><a class="nav-a" href="/about.html">About</a></li>
+                <li><a class="nav-a active" href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logo">TechVision.</div>
+        <div class="social-media-icons">
+            <ul>
+                <li><img src="/icons/facebook.png" alt="Facebook logo"></li>
+                <li><img src="/icons/instagram.png" alt="Instagram logo"></li>
+                <li><img src="/icons/x.png" alt="X logo"></li>
+            </ul>
+        </div>
+    </header>
+    <section class="contact-form">
+        <h1 class="orange-text">Contact Us</h1>
+        <form id="contactForm" onsubmit="validateForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <div id="nameError" class="error-message"></div>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+            <div id="emailError" class="error-message"></div>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject">
+            <div id="subjectError" class="error-message"></div>
+
+            <label for="message">Message Content:</label>
+            <textarea id="message" name="message"></textarea>
+            <div id="messageError" class="error-message"></div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <div class="spacer"></div>
+    <footer>
+        <div class="footer-logo">TechVision. <span class="orange-text">Exploring the Digital Frontier</span></div>
+        <div></div>
+        <p>Copyright &copy; 2023 TechVision.</p>
+    </footer>
+</body>
+
+</html>
