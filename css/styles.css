@@ -91,6 +91,11 @@ nav ul {
   font-weight: bold;
 }
 
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
 .social-media-icons ul {
   justify-content: right;
   display: flex;
