@@ -1,19 +1,35 @@
 import { getBlogPosts, posts } from "./app.js";
 
+let totalPages;
+
 async function displayBlogPostsInCarousel() {
   try {
     // Fetch the blog posts
     await getBlogPosts();
 
+    // Calculate posts per page based on screen width
+    function calculatePostsPerPage() {
+      if (window.innerWidth > 1000) {
+        return 4; // Display 4 items at a time on screens wider than 1000px
+      } else if (window.innerWidth >= 850) {
+        return 3; // Display 3 items at a time on screens between 850px and 999px
+      } else if (window.innerWidth >= 650) {
+        return 2; // Display 2 items at a time on screens between 650px and 849px
+      } else {
+        return 1; // Default to 1 item at a time on smaller screens
+      }
+    }
+
+    let postsPerPage = calculatePostsPerPage();
+
     const gridPosts = document.querySelector(".grid-posts");
     const leftButton = document.querySelector(".left-button");
     const rightButton = document.querySelector(".right-button");
     const paginationDots = document.querySelector(".dots");
-    const postsPerPage = 4;
     let currentPage = 0;
 
     // Calculate the total number of pages
-    const totalPages = Math.ceil(posts.length / postsPerPage);
+    totalPages = Math.ceil(posts.length / postsPerPage);
 
     // Define a function to display posts on the current page
     function displayPosts() {
@@ -78,6 +94,20 @@ async function displayBlogPostsInCarousel() {
         paginationDots.appendChild(dot);
       }
     }
+
+    window.addEventListener("resize", () => {
+      const newPostsPerPage = calculatePostsPerPage();
+      if (newPostsPerPage !== postsPerPage) {
+        postsPerPage = newPostsPerPage;
+        totalPages = Math.ceil(posts.length / postsPerPage);
+        if (currentPage >= totalPages) {
+          currentPage = totalPages - 1;
+        }
+
+        displayPosts(); // Redraw the carousel with the new number of posts per page
+        updatePaginationDots();
+      }
+    });
 
     // Create event listener for the left button
     leftButton.addEventListener("click", () => {

@@ -7,12 +7,25 @@
     <meta name="author" content="Petter-Nikolai Kristoffersen">
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/f2ebdb1586.js" crossorigin="anonymous"></script>
+    <script defer src="/js/hamburger.js"></script>
     <script type="module" defer src="/js/carousel.js"></script>
     <title>TechVision | Home</title>
 </head>
 
 <body>
     <header>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleHamburgerMenu()">☰</div>
+
+        <!-- Overlay Menu -->
+        <div class="hamburger-overlay">
+            <div class="hamburger-overlay-content">
+                <a href="/index.html">Home</a>
+                <a href="/blog-posts.html">Blog</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
         <nav>
             <ul>
                 <li><a class="nav-a active" href="#">Home</a></li>
@@ -64,9 +77,16 @@
     </section>
     <div class="spacer"></div>
     <footer>
+        <div class="footer-social-media-icons">
+            <ul>
+                <li><img src="/icons/facebook.png" alt="Facebook logo"></li>
+                <li><img src="/icons/instagram.png" alt="Instagram logo"></li>
+                <li><img src="/icons/x.png" alt="X logo"></li>
+            </ul>
+        </div>
         <div class="footer-logo">TechVision. <span class="orange-text">Exploring the Digital Frontier</span></div>
         <div></div>
-        <p>Copyright &copy; 2023 TechVision.</p>
+        <p>Copyright &copy; 2023 Petter-Nikolai Kristoffersen</p>
     </footer>
 </body>
 
