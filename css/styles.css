@@ -640,4 +640,15 @@ footer p {
   h1 {
     font-size: 1.5rem; /* Smaller h1 font size */
   }
+
+  #comment-form {
+    width: 100%;
+  }
+
+  #comment-form button {
+    background-color: #ff5c00;
+    padding: 10px;
+    width: 100%;
+    color: white;
+  }
 }
