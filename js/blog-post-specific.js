@@ -1,6 +1,8 @@
+let postId;
+
 async function displaySpecificPost() {
   const urlParams = new URLSearchParams(window.location.search);
-  const postId = urlParams.get("id");
+  postId = urlParams.get("id");
 
   try {
     // Fetch the specific blog post data including the image URL
