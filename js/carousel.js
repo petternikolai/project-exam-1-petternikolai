@@ -57,7 +57,7 @@ async function displayBlogPostsInCarousel() {
           post.better_featured_image.media_details.sizes.medium.source_url;
         postImage.alt = post.title.rendered;
 
-        const postTitle = document.createElement("h3");
+        const postTitle = document.createElement("h2");
         postTitle.textContent = post.title.rendered;
 
         const postExcerpt = document.createElement("p");
