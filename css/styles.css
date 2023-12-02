@@ -349,29 +349,6 @@ button:hover {
   color: white;
 }
 
-#comment-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 30%;
-}
-
-#comment-text,
-#comment-name,
-#comment-email {
-  border: 1px solid;
-  padding: 5px;
-  border-radius: 5px;
-  resize: none;
-}
-
-#comment-form button {
-  background-color: #ff5c00;
-  padding: 10px;
-  width: 50%;
-  color: white;
-}
-
 /* Contact Form Styles */
 .contact-form {
   background-color: white;
@@ -639,16 +616,5 @@ footer p {
 
   h1 {
     font-size: 1.5rem; /* Smaller h1 font size */
-  }
-
-  #comment-form {
-    width: 100%;
-  }
-
-  #comment-form button {
-    background-color: #ff5c00;
-    padding: 10px;
-    width: 100%;
-    color: white;
   }
 }
