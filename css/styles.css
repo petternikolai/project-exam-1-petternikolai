@@ -202,7 +202,8 @@ button:hover {
 
 .post:hover {
   cursor: pointer;
-  background-color: rgb(255, 92, 0);
+  background-color: #2e6100;
+  color: white;
 }
 
 .button-left {
@@ -279,7 +280,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7); 
   z-index: 1;
   overflow: auto;
 }
@@ -288,8 +289,8 @@ button:hover {
 .modal-content {
   display: block;
   margin: 10% auto;
-  max-width: 90%; /* Adjust as needed for your design */
-  max-height: 90vh; /* Adjust as needed for your design */
+  max-width: 90%;
+  max-height: 90vh; 
 }
 
 /* Style for the close button (the 'x' symbol) */
@@ -304,7 +305,7 @@ button:hover {
 
 /* Close button hover effect */
 .close-modal:hover {
-  color: #ff0000; /* Change to your desired hover color */
+  color: #ff0000;
 }
 
 /* Blog */
@@ -331,6 +332,7 @@ button:hover {
 .blog-post:hover {
   cursor: pointer;
   background-color: #2e6100;
+  color: white;
 }
 
 .blog-post img {
