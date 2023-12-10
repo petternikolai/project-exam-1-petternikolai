@@ -13,8 +13,6 @@ This is my project exam for year 1 of Front End Development at Noroff. I have pu
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
 - HTML
 - CSS
 - Vanilla JavaScript
